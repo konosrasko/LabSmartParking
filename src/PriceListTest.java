@@ -10,13 +10,13 @@ class PriceListTest {
         pricelist.addPriceScale(120,20,1);
         pricelist.addPriceScale(1440,60,3);
         pricelist.addPriceScale(2880,240,2);
-        pricelist.calculate_cost(2800);
+        pricelist.calculate_cost(1440);
     }
 
     @Test
     void PriceListTestMinus(){
         PriceList pricelistMinus = new PriceList(2);
-        pricelistMinus.addPriceScale(-10,0,-10);
+        pricelistMinus.addPriceScale(-120,10,-10);
         pricelistMinus.calculate_cost(240);
     }
     @Test
