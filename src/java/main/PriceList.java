@@ -18,7 +18,7 @@ public class PriceList {
 
     public void  addPriceScale(int end, int scale, double cost)
     {
-        if(!(end<=0 || scale <=0) || (end>scale) ) {
+        if((end>0 || scale>0) && (end>scale) && cost>=0 ) {
             scaleList.add(new PriceScale(end, scale, cost));
         }else {
             System.out.println("Your input is not valid.");
