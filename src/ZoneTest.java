@@ -10,11 +10,14 @@ class ZoneTest {
     Slot d = new Slot ("3");
 
 
+
     @Test
-    void nameShouldBeEntered ()
+    void zoneNameShouldBeEntered ()
     {
         assertFalse(this.a.getName() == "" , "you must enter a name ");
     }
+
+
     @Test
     void slotNameShouldBeEntered()
     {
