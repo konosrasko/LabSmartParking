@@ -4,16 +4,16 @@ import java.util.List;
 public class Slot {
     private String name;
     private List<PriceList> priceList= new ArrayList<>();
-    private List<ParkingSpot> parkingSpot = new ArrayList<>();
+    private List<ParkingStop> parkingSpot = new ArrayList<>();
     public Slot(String name){
         this.name=name;
     }
 
-    public addPriceList(PriceScale priceScale){
+    public void addPriceList(PriceList priceScale){
         priceList.add(priceScale);
     }
 
-    public addParkingSpot(ParkingSpot pSpot){
+    public void addParkingSpot(ParkingStop pSpot){
         parkingSpot.add(pSpot);
     }
 
