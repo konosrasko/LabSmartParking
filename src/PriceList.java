@@ -32,7 +32,6 @@ public class PriceList {
                 this.totalDuration -= scaleList.get(i).getScale();
             }else{
                 totalCost += scaleList.get(i).getCost() * ((this.totalDuration/scaleList.get(i).getScale())+1) ;
-                this.totalDuration = scaleList.get(i).getScale();
                 this.totalDuration=0;
             }
         }
