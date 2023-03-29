@@ -9,7 +9,7 @@ public class Parking {
         this.name=name;
     }
 
-    public addZone(Zone zone){
+    public void addZone(Zone zone){
         zoneList.add(zone);
     }
 
