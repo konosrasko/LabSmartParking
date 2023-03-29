@@ -10,7 +10,7 @@ class PriceListTest {
         pricelist.addPriceScale(120,20,1);
         pricelist.addPriceScale(1440,60,3);
         pricelist.addPriceScale(2880,240,2);
-        pricelist.calculate_cost(2800);
+        pricelist.calculate_cost(1440);
     }
 
     @Test
