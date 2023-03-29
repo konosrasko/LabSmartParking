@@ -6,6 +6,8 @@ public class PriceScale {
     private int scale;
     private double cost;
 
+
+
     protected PriceScale(int duration, int scale, double cost) //Each "scale" minutes costs "cost" euros
     {
         this.duration = duration;
@@ -14,32 +16,9 @@ public class PriceScale {
     }
 
 
-    public double calculate_cost(int x)
-    {
-        double totalCost;
-        if (x>0)
-            totalCost = cost;
-        else
-            totalCost = 0;
-
-        vehicleDur = x;
-        if(vehicleDur>duration)
-        {
-            vehicleDur = duration;
-            returnDur = x-vehicleDur;
-        }else {
-            returnDur = 0;
-        }
-
-        while (scale < vehicleDur)
-        {
-            totalCost = totalCost + cost;
-            scale = scale +scale;
-        }
-
-        return totalCost;
+    public double getCost(){
+        return cost;
     }
-
     public int getScale()
     {
         return scale;

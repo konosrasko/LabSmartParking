@@ -28,10 +28,12 @@ public class PriceList {
 
         for(int i=0; i<scaleList.size(); i++)
         {
-            if(this.totalDuration>0) {
-                totalCost = totalCost + scaleList.get(i).calculate_cost(this.totalDuration);
-                this.totalDuration = scaleList.get(i).getVehicleDur();
+            if(this.totalDuration> scaleList.get(i).getDuration()) {
+                totalCost += scaleList.get(i).getCost() * (scaleList.get(i).getDuration()/scaleList.get(i).getScale()) ;
+                this.totalDuration -= scaleList.get(i).getScale();
             }else{
+                totalCost += scaleList.get(i).getCost() * ((this.totalDuration/scaleList.get(i).getScale())+1) ;
+                this.totalDuration = scaleList.get(i).getScale();
                 break;
             }
         }
