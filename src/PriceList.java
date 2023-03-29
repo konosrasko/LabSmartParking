@@ -5,8 +5,8 @@ import java.util.List;
 public class PriceList {
 
     private int id;
-    private Date startingDate;
-    private Date endingDate;
+    private int startingDate;
+    private int endingDate;
     private int totalDuration;
     private List<PriceScale> scaleList = new ArrayList<>();
 
