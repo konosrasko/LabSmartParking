@@ -16,7 +16,7 @@ class PriceListTest {
     @Test
     void PriceListTestMinus(){
         PriceList pricelistMinus = new PriceList(2);
-        pricelistMinus.addPriceScale(-10,0,-10);
+        pricelistMinus.addPriceScale(-120,10,-10);
         pricelistMinus.calculate_cost(240);
     }
     @Test

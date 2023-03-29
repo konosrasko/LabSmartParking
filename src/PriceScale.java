@@ -1,7 +1,6 @@
 public class PriceScale {
 
     private int duration;
-
     private int vehicleDur, returnDur;
     private int scale;
     private double cost;

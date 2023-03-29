@@ -25,16 +25,15 @@ public class PriceList {
     {
         double totalCost=0;
         this.totalDuration = totalDuration;
-
-        for(int i=0; i<scaleList.size(); i++)
-        {
+        int i=0;
+        while (this.totalDuration>0){
             if(this.totalDuration> scaleList.get(i).getDuration()) {
                 totalCost += scaleList.get(i).getCost() * (scaleList.get(i).getDuration()/scaleList.get(i).getScale()) ;
                 this.totalDuration -= scaleList.get(i).getScale();
             }else{
                 totalCost += scaleList.get(i).getCost() * ((this.totalDuration/scaleList.get(i).getScale())+1) ;
                 this.totalDuration = scaleList.get(i).getScale();
-                break;
+                this.totalDuration=0;
             }
         }
 
