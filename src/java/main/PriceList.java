@@ -18,7 +18,11 @@ public class PriceList {
 
     public void  addPriceScale(int end, int scale, double cost)
     {
-        scaleList.add(new PriceScale(end, scale, cost));
+        if(!(end<=0 || scale <=0) || (end>scale) ) {
+            scaleList.add(new PriceScale(end, scale, cost));
+        }else {
+            System.out.println("Your input is not valid.");
+        }
 
     }
 
