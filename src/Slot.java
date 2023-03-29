@@ -19,4 +19,16 @@ public class Slot {
         parkingStop.add(pStop);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public List<PriceList> getPriceList() {
+        return priceList;
+    }
+
+    public List<ParkingStop> getParkingStop() {
+        return parkingStop;
+    }
+
 }

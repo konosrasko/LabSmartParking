@@ -8,9 +8,16 @@ public class Zone {
         this.name=name;
     }
 
-    
     public void addSlot(Slot slot){
         slotList.add(slot);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Slot> getSlotList() {
+        return slotList;
     }
 
 }
