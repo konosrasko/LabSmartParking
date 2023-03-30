@@ -14,7 +14,7 @@ class ZoneTest {
     @Test
     void zoneNameShouldBeEntered ()
     {
-        assertFalse(this.a.getName() == "" , "you must enter a name ");
+        assertEquals("Not valid input." , "");
     }
 
 

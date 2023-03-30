@@ -8,7 +8,7 @@ public class Slot {
 
 
     public Slot(String name){
-        this.name=name;
+            this.name=name;
     }
 
     public void addPriceList(PriceList priceList1){

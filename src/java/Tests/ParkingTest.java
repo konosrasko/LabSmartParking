@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingTest {
-    Parking parking = new Parking("asd");
+    Parking parking = new Parking(" ");
     Zone z = new Zone("A");
 
     ParkingTest() {

@@ -5,6 +5,10 @@ public class Parking {
     private String name;
     private List<Zone> zoneList = new ArrayList<>();
 
+    public Parking(String name){
+            this.name=name;
+    }
+
     public String getName() {
         return name;
     }
@@ -13,13 +17,13 @@ public class Parking {
         return zoneList;
     }
 
-    public Parking(String name){
-        this.name=name;
-    }
 
 
     public void addZone(Zone zone){
         zoneList.add(zone);
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 }

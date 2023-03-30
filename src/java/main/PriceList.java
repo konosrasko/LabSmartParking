@@ -8,7 +8,6 @@ public class PriceList {
     private int endingDate;
     private int totalDuration;
     private List<PriceScale> scaleList = new ArrayList<>();
-    private int totalcost;
     private double totalCost;
 
     public PriceList(int id)
@@ -41,7 +40,6 @@ public class PriceList {
         }
 
         System.out.println("Your total cost is: "+totalCost);
-
 
     }
 
