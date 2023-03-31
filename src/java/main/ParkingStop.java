@@ -22,19 +22,26 @@ public class ParkingStop {
     }
 
     public LocalTime getEntry() {
-        return LocalTime.now();
+        entry = LocalTime.now();
+        return entry;
     }
 
 
 
     public LocalTime getExit() {
-        return LocalTime.now();
+        exit = LocalTime.now();
+        return exit;
     }
 
 
-    public long getDuration()
+    public double getDuration()
     {
-        duration = Duration.between(getEntry(), getExit()).get(ChronoUnit.MINUTES);
+        this.entry = getEntry();
+        this.exit = getExit();
+        duration = Duration.between(this.entry, this.exit).get(ChronoUnit.MINUTES);
         return duration;
     }
+
+
+
 }

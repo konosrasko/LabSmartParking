@@ -10,16 +10,16 @@ import static org.junit.jupiter.api.Assertions.*;
     PriceList pl1 = new PriceList(1);
 
 
-    @Test
-    void SlotTest(){
-        pl1.addPriceScale(120,10,1);
-        pl1.addPriceScale(1440,60,3);
-        slot.addPriceList(pl1);
-        ZoneA.addSlot(slot);
-        p1.addZone(ZoneA);
-        pl1.calculate_cost(120);
-        assertEquals(12,pl1.getTotalCost());
-
-    }
+//    @Test
+//    void SlotTest(){
+//        pl1.addPriceScale(120,10,1);
+//        pl1.addPriceScale(1440,60,3);
+//        slot.addPriceList(pl1);
+//        ZoneA.addSlot(slot);
+//        p1.addZone(ZoneA);
+//        pl1.calculate_cost(120);
+//        assertEquals(12,pl1.getTotalCost());
+//
+//    }
 
 }*/
