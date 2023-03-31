@@ -19,7 +19,7 @@ class PriceListTest {
         pricelist.calculate_cost();
     }
 
-    /*@Test
+    @Test
     void PriceListTestMinus(){
         PriceList pricelistMinus = new PriceList(2);
         pricelistMinus.addPriceScale(-120,10,-10);
@@ -40,5 +40,4 @@ class PriceListTest {
         pricelistDouble.addPriceScale(245,250,1);
         pricelistDouble.calculate_cost(240);
     }
-    */
 }
