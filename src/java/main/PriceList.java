@@ -25,6 +25,14 @@ public class PriceList {
 
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public double calculate_cost()
     {
         totalDuration = pStop.getDuration();

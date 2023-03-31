@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Parking {
@@ -17,6 +18,16 @@ public class Parking {
         return zoneList;
     }
 
+    public void printZoneList(){
+        System.out.println(Arrays.toString(zoneList.toArray()));
+    }
+
+    public void nameChange(String oldName,String newName){
+        for(Zone zoneList : zoneList){
+            if (zoneList.getName().equals(oldName))
+                zoneList.setName(newName);
+        }
+    }
 
     public void addZone(Zone zone){
         zoneList.add(zone);
