@@ -14,7 +14,4 @@ class ZoneTest {
         assertEquals(1 , zone.getSlotList().size());
     }
 
-
-
-
 }

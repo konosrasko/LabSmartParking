@@ -5,7 +5,7 @@ import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/*class PriceListTest {
+class PriceListTest {
 
     @Test
     void PriceListTest(){
@@ -40,4 +40,4 @@ import static org.junit.jupiter.api.Assertions.*;
         pricelistDouble.addPriceScale(245,250,1);
         pricelistDouble.calculate_cost(240);
     }
-}*/
+}

@@ -10,12 +10,12 @@ public class Zone {
     public Zone(){
 
     }
-    public void setName(String name) {
+    public Zone(String name){
         this.name = name;
     }
 
-    public Zone(String name){
-            this.name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void addSlot(Slot slot){

@@ -26,13 +26,10 @@ public class ParkingStop {
         return entry;
     }
 
-
-
     public LocalTime getExit() {
         exit = LocalTime.now();
         return exit;
     }
-
 
     public double getDuration()
     {
