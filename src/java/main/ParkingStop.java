@@ -34,9 +34,14 @@ public class ParkingStop {
     }
 
 
-    public long getDuration()
+    public double getDuration()
     {
-        duration = Duration.between(getEntry(), getExit()).get(ChronoUnit.MINUTES);
+        this.entry = getEntry();
+        this.exit = getExit();
+        duration = Duration.between(this.entry, this.exit).get(ChronoUnit.MINUTES);
         return duration;
     }
+
+
+
 }

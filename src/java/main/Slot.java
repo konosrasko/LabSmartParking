@@ -1,24 +1,33 @@
-import java.lang.reflect.Array;
+import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Slot {
     private String name;
+    private ParkingStop pStop;
     private List<PriceList> priceList= new ArrayList<>();
     private List<ParkingStop> parkingStop = new ArrayList<>();
+    private ParkingStop p;
 
 
     public Slot(String name){
-            this.name=name;
+        this.name=name;
+
     }
 
     public void addPriceList(PriceList priceList1){
         priceList.add(priceList1);
     }
 
-    public void addParkingSpot(ParkingStop pStop){
+
+    public void addParkingSpot(String tag){
+        this.pStop = new ParkingStop(tag);
         parkingStop.add(pStop);
+    }
+
+    public double calcTime()
+    {
+        return pStop.getDuration();
     }
 
     public String getName() {
@@ -36,19 +45,4 @@ public class Slot {
     public void setName(String name) {
         this.name = name;
     }
-
-    public void nameChangePL(int oldId, int newId){
-        for(PriceList priceList : priceList){
-            if (priceList.getId() == oldId)
-                priceList.setId(newId);
-        }
-    }
-
-    public void printPL(){
-        System.out.println(Arrays.toString(priceList.toArray()));
-    }
-
-
-
-
 }
