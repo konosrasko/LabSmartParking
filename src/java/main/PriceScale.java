@@ -5,7 +5,6 @@ public class PriceScale {
     private double cost;
 
 
-
     protected PriceScale(int duration, int scale, double cost) //Each "scale" minutes costs "cost" euros
     {
         this.duration = duration;
@@ -26,10 +25,4 @@ public class PriceScale {
     {
         return duration;
     }
-
-
-
-
-
-
 }
