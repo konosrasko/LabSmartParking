@@ -3,6 +3,7 @@ import java.util.List;
 
 public class PriceList {
 
+    ParkingStop Duration = new ParkingStop("knt8565");
     private int id;
     private int totalDuration;
     private List<PriceScale> scaleList = new ArrayList<>();
