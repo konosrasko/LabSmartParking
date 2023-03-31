@@ -18,7 +18,7 @@ class SlotTest {
         ZoneA.addSlot(slot);
         p1.addZone(ZoneA);
         pl1.calculate_cost(120);
-        assertEquals(12,pl1.getTotalCost());
+        assertEquals(12,pl1);
 
     }
 

@@ -8,6 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class PriceListTest {
 
     @Test
+    void PriceScaleDouble() {
+        PriceList p1 = new PriceList(1);
+        p1.addPriceScale(120,10,1);
+        assertThrows(Exception.class,()->p1.addPriceScale(110,10,1));
+
+    }
+}
+
+   /* @Test
     void PriceListTest(){
         PriceList pricelist = new PriceList(1);
         ParkingStop pk = new ParkingStop("aSD");

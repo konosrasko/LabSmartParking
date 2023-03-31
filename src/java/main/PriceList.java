@@ -15,17 +15,10 @@ public class PriceList {
         this.id = id;
     }
 
-    public void  addPriceScale(int end, int scale, double cost)
-    {
-        if((end>0 || scale>0) && (end>scale) && cost>=0 ) {
-            scaleList.add(new PriceScale(end, scale, cost));
-        }else {
-            System.out.println("Your input is not valid.");
-        }
 
-    }
 
-    public void setId(int id) {
+
+        public void setId(int id) {
         this.id = id;
     }
 
@@ -52,10 +45,5 @@ public class PriceList {
         System.out.println("Your total cost is: "+totalCost);
         return totalCost;
     }
-
-
-
-
-
 
 }
