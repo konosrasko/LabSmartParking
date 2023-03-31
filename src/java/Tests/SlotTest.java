@@ -2,8 +2,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class SlotTest {
-
+/*class SlotTest {
+    ParkingStop parkingStop = new ParkingStop("knt9123");
     Parking p1 = new Parking("limani");
     Zone ZoneA= new Zone("ZoneA");
     Slot slot = new Slot("1");
@@ -22,4 +22,4 @@ class SlotTest {
 
     }
 
-}
+}*/

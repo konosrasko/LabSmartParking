@@ -31,4 +31,7 @@ public class Slot {
         return parkingStop;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 }
