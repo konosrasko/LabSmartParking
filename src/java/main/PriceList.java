@@ -5,10 +5,10 @@ import java.util.List;
 public class PriceList {
 
     private int id;
-    private long totalDuration;
+    private double totalDuration;
     private List<PriceScale> scaleList = new ArrayList<>();
 
-    ParkingStop pStop= new ParkingStop("asd");
+
 
     public PriceList(int id)
     {
@@ -26,9 +26,9 @@ public class PriceList {
         return id;
     }
 
-    public double calculate_cost()
+    public double calculate_cost(double dur)
     {
-        totalDuration = pStop.getDuration();
+        totalDuration = dur;
         double totalCost=0;
         int i=0;
         while (totalDuration>0){
