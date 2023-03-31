@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PriceListTest {
 
     @Test
-    void PriceScaleDouble() throws Exception {
+    void PriceScaleError() throws Exception {
         PriceList p1 = new PriceList(1);
         p1.addPriceScale(120,10,1);
         p1.addPriceScale(130,10,1);
