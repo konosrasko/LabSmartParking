@@ -1,6 +1,6 @@
 public class PriceScale {
 
-    private int duration;
+    private int duration,id;
     private int scale;
     private double cost;
 

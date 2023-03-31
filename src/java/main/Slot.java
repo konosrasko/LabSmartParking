@@ -1,4 +1,6 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Slot {
@@ -34,4 +36,19 @@ public class Slot {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void nameChangePL(int oldId, int newId){
+        for(PriceList priceList : priceList){
+            if (priceList.getId() == oldId)
+                priceList.setId(newId);
+        }
+    }
+
+    public void printPL(){
+        System.out.println(Arrays.toString(priceList.toArray()));
+    }
+
+
+
+
 }
