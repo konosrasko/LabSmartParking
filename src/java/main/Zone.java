@@ -7,6 +7,9 @@ public class Zone {
     private List<Slot> slotList = new ArrayList<>();
     private  int flag;
 
+    public Zone(){
+
+    }
     public void setName(String name) {
         this.name = name;
     }

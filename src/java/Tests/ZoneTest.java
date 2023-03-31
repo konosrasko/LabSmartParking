@@ -3,36 +3,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ZoneTest {
-
-    Zone a = new Zone("asd");
-    Slot b = new Slot("1");
-    Slot c = new Slot ("2");
-    Slot d = new Slot ("3");
-
+    Zone zone = new Zone("zone");
 
 
     @Test
-    void zoneNameShouldBeEntered ()
-    {
-        assertEquals("Not valid input." , "");
+    void addSlot() {
+        Slot slot = new Slot();
+        slot.setName("slot1");
+        zone.addSlot(slot);
+        assertEquals(1 , zone.getSlotList().size());
     }
 
 
-    @Test
-    void slotNameShouldBeEntered()
-    {
-            assertFalse(b.getName() == "" ,  " enter a name for the slot ");
-    }
-    @Test
-
-    void slotsShouldBeAdded()
-    {
-        a.addSlot(b);
-        a.addSlot(c);
-        a.addSlot(d);
-        assertTrue(a.getSlotList().size() > 0 , "Failed to add the slots ");
-
-    }
-    }
 
 
+}

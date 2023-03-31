@@ -8,7 +8,9 @@ public class Slot {
     private List<PriceList> priceList= new ArrayList<>();
     private List<ParkingStop> parkingStop = new ArrayList<>();
 
+    public Slot(){
 
+    }
     public Slot(String name){
             this.name=name;
     }
