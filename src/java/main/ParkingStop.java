@@ -1,33 +1,31 @@
+import java.time.Duration;
+import java.time.LocalTime;
+
 public class ParkingStop {
 
     private String tags;
-    private int entry, exit;
-    private int duration;
+    private LocalTime entry, exit;
+    private Duration duration;
 
     public ParkingStop(String tag)
     {
         tags = tag;
     }
 
-    public int getEntry() {
-        return entry;
+    public LocalTime getEntry() {
+        return LocalTime.now();
     }
 
-    public void setEntry(int entry) {
-        this.entry = entry;
+
+
+    public LocalTime getExit() {
+        return LocalTime.now();
     }
 
-    public int getExit() {
-        return exit;
-    }
 
-    public void setExit(int exit) {
-        this.exit = exit;
-    }
-
-    public int getDuration()
+    public Duration getDuration()
     {
-        duration = exit - entry;
+        duration = Duration.between(getEntry(), getExit());
         return duration;
     }
 
