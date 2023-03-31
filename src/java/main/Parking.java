@@ -18,7 +18,6 @@ public class Parking {
     }
 
 
-
     public void addZone(Zone zone){
         zoneList.add(zone);
     }
