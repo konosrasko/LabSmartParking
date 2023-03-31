@@ -12,6 +12,7 @@ public class PriceList {
     ParkingStop pStop = new ParkingStop("asd");
 
     public PriceList(int id) {
+
         this.id = id;
     }
 
