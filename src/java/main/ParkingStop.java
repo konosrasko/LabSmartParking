@@ -22,13 +22,15 @@ public class ParkingStop {
     }
 
     public LocalTime getEntry() {
-        return LocalTime.now();
+        entry = LocalTime.now();
+        return entry;
     }
 
 
 
     public LocalTime getExit() {
-        return LocalTime.now();
+        exit = LocalTime.now();
+        return exit;
     }
 
 
