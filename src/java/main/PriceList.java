@@ -19,22 +19,42 @@ public class PriceList {
         if(end>0 && scale>0 && (end>scale) && cost>=0) {
 
             scaleList.add(new PriceScale(end, scale, cost));
-            PriceScaleError();
 
+
+            }
+    }
+
+    public void changePriceScale(int id, int end, int scale, double cost)
+    {
+        int index=0;
+        boolean found = false;
+
+        for(int i=0;i< scaleList.size();i++)
+        {
+            if (scaleList.get(i).getId() == id){
+                index = i;
+                found = true;
+                break;
             }
         }
 
-
-    public void PriceScaleError() throws Exception {
-        for (int i = 1; i < scaleList.size(); i++) {
-            if (scaleList.get(i).getDuration() < scaleList.get(i - 1).getDuration()) {
-                Exception exception = new Exception();
-                throw exception;
-            }
-
+        if(found)
+        {
+            scaleList.add(index, new PriceScale(end, scale, cost));
         }
     }
-        public void setId(int id) {
+
+
+//    public void PriceScaleError() throws Exception {
+//        for (int i = 1; i < scaleList.size(); i++) {
+//            if (scaleList.get(i).getDuration() < scaleList.get(i - 1).getDuration()) {
+//                Exception exception = new Exception();
+//                throw exception;
+//            }
+//
+//        }
+//    }
+    public void setId(int id) {
         this.id = id;
     }
 
