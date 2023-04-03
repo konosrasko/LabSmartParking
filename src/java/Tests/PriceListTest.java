@@ -12,12 +12,12 @@ class PriceListTest {
     void PriceListTest() {
         PriceList pricelist = new PriceList(1);
         ParkingStop pk = new ParkingStop("aSD");
-        pk.setEntry(LocalTime.of(12,01,00));
-        pk.setExit(LocalTime.now());
+        pk.setEntry(LocalTime.of(12,00,00));
+        pk.setExit(LocalTime.of(14,45,00));
         pricelist.addPriceScale(120,20,1);
         pricelist.addPriceScale(1440,60,3);
         pricelist.addPriceScale(2880,240,2);
-        assertEquals(5.3,pricelist.calculate_cost(pk.getDuration()));
+        assertEquals(11.25,pricelist.calculate_cost(pk.getDuration()));
     }
 
     @Test
