@@ -14,26 +14,25 @@ public class PriceList {
     {
         this.id = id;
     }
-    public void  addPriceScale(int end, int scale, double cost) throws Exception {
+    public void  addPriceScale(int end, int scale, double cost){
 
         if(end>0 && scale>0 && (end>scale) && cost>=0) {
 
             scaleList.add(new PriceScale(end, scale, cost));
-            PriceScaleError();
 
             }
         }
 
 
-    public void PriceScaleError() throws Exception {
+    /*public void PriceScaleError() throws Exception {
         for (int i = 1; i < scaleList.size(); i++) {
             if (scaleList.get(i).getDuration() < scaleList.get(i - 1).getDuration()) {
                 Exception exception = new Exception();
                 throw exception;
             }
-
         }
-    }
+     */
+
         public void setId(int id) {
         this.id = id;
     }

@@ -7,17 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PriceListTest {
 
+
+
+
     @Test
-    void PriceScaleError() throws Exception {
-        PriceList p1 = new PriceList(1);
-        p1.addPriceScale(120,10,1);
-        p1.addPriceScale(130,10,1);
-
-
-    }
-}
-
-   /* @Test
     void PriceListTest(){
         PriceList pricelist = new PriceList(1);
         ParkingStop pk = new ParkingStop("aSD");
@@ -26,7 +19,8 @@ class PriceListTest {
         pricelist.addPriceScale(120,20,1);
         pricelist.addPriceScale(1440,60,3);
         pricelist.addPriceScale(2880,240,2);
-        pricelist.calculate_cost(30);
+        assertEquals(18,pricelist.calculate_cost(pricelist.calculate_cost(pk.getDuration())));
+
     }
 
     @Test
@@ -34,6 +28,7 @@ class PriceListTest {
         PriceList pricelistMinus = new PriceList(2);
         pricelistMinus.addPriceScale(-120,10,-10);
         pricelistMinus.calculate_cost(240);
+
     }
     @Test
     void PriceListTestDouble(){
@@ -51,4 +46,6 @@ class PriceListTest {
         pricelistDouble.calculate_cost(240);
     }
 
-*/
+
+
+}
