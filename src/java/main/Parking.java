@@ -22,7 +22,7 @@ public class Parking {
         System.out.println(Arrays.toString(zoneList.toArray()));
     }
 
-    public void nameChange(String oldName,String newName){
+    public void zoneNameChange(String oldName,String newName){
         for(Zone zoneList : zoneList){
             if (zoneList.getName().equals(oldName))
                 zoneList.setName(newName);
@@ -36,4 +36,10 @@ public class Parking {
     public void setName(String name) {
         this.name = name;
     }
+
+    public int numberOfZones()
+    {
+        return zoneList.size();
+    }
+
 }
