@@ -18,16 +18,14 @@ class PriceListTest {
         pricelist.addPriceScale(1440,60,3);
         pricelist.addPriceScale(2880,240,2);
         assertEquals(5.3,pricelist.calculate_cost(pk.getDuration()));
-
-
     }
 
     @Test
     void PriceListTestMinus() {
         PriceList pricelistMinus = new PriceList(2);
         assertThrows(IllegalArgumentException.class,()->pricelistMinus.addPriceScale(-120,10,-10));
-
     }
+
     @Test
     void PriceListTestDouble() {
         PriceList pricelistDouble = new PriceList(3);
@@ -42,9 +40,16 @@ class PriceListTest {
         assertThrows(IllegalArgumentException.class,()->  pricelistDouble.addPriceScale(245,250,1));
     }
 
+ @Test          //Για το ID οταν ειναι
+    void ChangePriceScaleTest(){
+        PriceList pricelistGetScales = new PriceList(4);
+        pricelistGetScales.addPriceScale(120,10,1);
+        pricelistGetScales.addPriceScale(240,10,1);
+        pricelistGetScales.addPriceScale(1440,20,1);
+        pricelistGetScales.changePriceScale(2,2880,10,2.5);
 
 
-
+    }
 
 
 

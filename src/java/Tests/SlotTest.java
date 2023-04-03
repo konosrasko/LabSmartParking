@@ -22,6 +22,19 @@ class SlotTest {
         assertTrue(ZoneA.slotExistance("Slot4"));
     }
 
+    @Test
+    void SlotPL(){
+        Slot slot = new Slot("slot");
+        slot.addParkingSpot("1");
+        assertEquals("slot",slot.getName());
+    }
+
+    @Test
+    void SlotCalcTimeTest(){
+        Slot slot = new Slot();
+        System.out.println(slot.calcTime());
+    }
+
 //    @Test
 //    void SlotTest(){
 //        pl1.addPriceScale(120,10,1);

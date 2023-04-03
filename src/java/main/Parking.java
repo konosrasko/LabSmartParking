@@ -15,10 +15,6 @@ public class Parking {
 
             this.name = name;
 
-
-
-
-
     }
 
     public String getName() {
