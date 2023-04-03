@@ -32,7 +32,8 @@ public class Zone {
 
 
     public void printSlotList(){
-        System.out.println(Arrays.toString(slotList.toArray()));
+        for(Slot slotList : slotList)
+            System.out.println(slotList.getName());
     }
 
     public void slotNameChange(String oldName,String newName){
@@ -40,5 +41,14 @@ public class Zone {
             if (slotList.getName().equals(oldName))
                 slotList.setName(newName);
         }
+    }
+
+    public boolean slotExistance(String slotName){
+        boolean flag = false;
+        for(Slot slotList : slotList){
+            if (slotList.getName().equals(slotName))
+                flag= true;
+        }
+        return flag;
     }
 }

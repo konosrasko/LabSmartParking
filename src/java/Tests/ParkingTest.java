@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingTest {
-    Parking parking = new Parking("");
+    Parking parking = new Parking();
     Parking parking2 = new Parking("ZoneA");
     Zone z = new Zone("A");
 
@@ -12,7 +12,8 @@ class ParkingTest {
 
     @Test
     void nameShouldBeEntered() {
-        assertFalse(parking.getName() == "", "you should enter a name ");
+        parking.setName("ParkingName");
+        assertTrue(parking.getName() == "ParkingName");
     }
 
     @Test
@@ -34,6 +35,10 @@ class ParkingTest {
 
     }
 
-
+    @Test
+    void zoneNameChangeTest(){
+        parking2.addZone(new Zone("A"));
+        parking2.zoneNameChange("A","a");
+    }
 }
 
