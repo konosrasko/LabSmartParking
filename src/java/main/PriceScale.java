@@ -1,12 +1,14 @@
 public class PriceScale {
 
-    private int duration,id;
+    private int duration;
+    private int id;
     private int scale;
     private double cost;
 
 
     protected PriceScale(int duration, int scale, double cost) //Each "scale" minutes costs "cost" euros
     {
+        this.id=id;
         this.duration = duration;
         this.scale = scale;
         this.cost = cost; //per scale unit
@@ -25,4 +27,10 @@ public class PriceScale {
     {
         return duration;
     }
+
+    public int getId()
+    {
+        return id;
+    }
+
 }
