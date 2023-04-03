@@ -42,8 +42,4 @@ public class Parking {
     public int numberOfZones() {
         return zoneList.size();
     }
-
-    public String getZoneName(){
-        Zone.
-    }
 }
