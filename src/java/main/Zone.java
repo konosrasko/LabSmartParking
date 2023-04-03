@@ -32,7 +32,8 @@ public class Zone {
 
 
     public void printSlotList(){
-        System.out.println(Arrays.toString(slotList.toArray()));
+        for(Slot slotList : slotList)
+            System.out.println(slotList.getName());
     }
 
     public void slotNameChange(String oldName,String newName){
@@ -41,6 +42,4 @@ public class Zone {
                 slotList.setName(newName);
         }
     }
-
-
 }

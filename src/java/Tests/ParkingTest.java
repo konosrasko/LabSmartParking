@@ -39,8 +39,6 @@ class ParkingTest {
     void zoneNameChangeTest(){
         parking2.addZone(new Zone("A"));
         parking2.zoneNameChange("A","a");
-        assertTrue();
-
     }
 }
 
