@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import org.junit.Test.None;
+
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
@@ -9,7 +9,7 @@ class PriceListTest {
 
 
     @Test
-    void PriceListTest() throws  Exception{
+    void PriceListTest() {
         PriceList pricelist = new PriceList(1);
         ParkingStop pk = new ParkingStop("aSD");
         pk.setEntry(LocalTime.of(12,01,00));
@@ -22,13 +22,13 @@ class PriceListTest {
     }
 
     @Test
-    void PriceListTestMinus() throws  Exception{
+    void PriceListTestMinus() {
         PriceList pricelistMinus = new PriceList(2);
-        pricelistMinus.addPriceScale(-120,10,-10);
+        assertThrows(IllegalArgumentException.class,()->pricelistMinus.addPriceScale(-120,10,-10));
 
     }
     @Test
-    void PriceListTestDouble() throws  Exception{
+    void PriceListTestDouble() {
         PriceList pricelistDouble = new PriceList(3);
         pricelistDouble.addPriceScale(245,25,1);
         pricelistDouble.addPriceScale(755,13,3);
@@ -36,10 +36,9 @@ class PriceListTest {
     }
 
     @Test
-    void PriceListEndScaleTest() throws  Exception{
+    void PriceListEndScaleTest() {
         PriceList pricelistDouble = new PriceList(3);
-        pricelistDouble.addPriceScale(245,250,1);
-        pricelistDouble.calculate_cost(240);
+        assertThrows(IllegalArgumentException.class,()->  pricelistDouble.addPriceScale(245,250,1));
     }
 
 
