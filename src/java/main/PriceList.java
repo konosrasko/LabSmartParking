@@ -15,14 +15,17 @@ public class PriceList {
         this.id = id;
     }
     public void  addPriceScale(int end, int scale, double cost) throws Exception {
+        try {
+            if (end > 0 && scale > 0 && (end > scale) && cost >= 0) {
 
-        if(end>0 && scale>0 && (end>scale) && cost>=0) {
-
-            scaleList.add(new PriceScale(end, scale, cost));
+                scaleList.add(new PriceScale(end, scale, cost));
             }
-        else {
-            Throw
+        }catch (IllegalArgumentException e){
+            System.out.println("Error numbers");
         }
+
+
+
     }
 
     public void changePriceScale(int id, int end, int scale, double cost)
@@ -78,9 +81,7 @@ public class PriceList {
                 totalDuration=0;
             }
         }
-
         System.out.println("Your total cost is: "+totalCost);
         return totalCost;
     }
-
 }

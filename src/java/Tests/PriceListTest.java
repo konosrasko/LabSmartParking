@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-
+import org.junit.Test.None;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
@@ -25,7 +25,6 @@ class PriceListTest {
     void PriceListTestMinus() throws  Exception{
         PriceList pricelistMinus = new PriceList(2);
         pricelistMinus.addPriceScale(-120,10,-10);
-       // assertEquals(18,pricelistMinus.calculate_cost(pricelistMinus));
 
     }
     @Test
