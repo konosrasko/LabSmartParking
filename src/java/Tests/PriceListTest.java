@@ -17,7 +17,8 @@ class PriceListTest {
         pricelist.addPriceScale(120,20,1);
         pricelist.addPriceScale(1440,60,3);
         pricelist.addPriceScale(2880,240,2);
-        assertEquals(18,pricelist.calculate_cost(pricelist.calculate_cost(pk.getDuration())));
+        assertEquals(5.3,pricelist.calculate_cost(pk.getDuration()));
+
 
     }
 
@@ -40,6 +41,9 @@ class PriceListTest {
         PriceList pricelistDouble = new PriceList(3);
         assertThrows(IllegalArgumentException.class,()->  pricelistDouble.addPriceScale(245,250,1));
     }
+
+
+
 
 
 
