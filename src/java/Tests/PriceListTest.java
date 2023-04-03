@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class PriceListTest {
 
 
-
-
     @Test
     void PriceListTest(){
         PriceList pricelist = new PriceList(1);
