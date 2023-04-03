@@ -14,14 +14,13 @@ class ZoneTest {
         assertEquals(1 , zone.getSlotList().size());
     }
 
-//    @Test
-//    void printSlotList(){
-//        zone.addSlot(new Slot("Slot1"));
-//        zone.addSlot(new Slot("Slot2"));
-//        zone.addSlot(new Slot("Slot3"));
-//        zone.printSlotList();
-//        assertTrue(true);
-//    }
+    @Test
+    void numberSlotList(){
+        zone.addSlot(new Slot("Slot1"));
+        zone.addSlot(new Slot("Slot2"));
+        zone.addSlot(new Slot("Slot3"));
+        assertEquals(3,zone.getSlotList().size());
+    }
 
     @Test
     void slotChangeName(){
