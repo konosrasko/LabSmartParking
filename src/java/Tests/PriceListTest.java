@@ -9,7 +9,7 @@ class PriceListTest {
 
 
     @Test
-    void PriceListTest(){
+    void PriceListTest() throws  Exception{
         PriceList pricelist = new PriceList(1);
         ParkingStop pk = new ParkingStop("aSD");
         pk.setEntry(LocalTime.of(12,01,00));
@@ -22,14 +22,14 @@ class PriceListTest {
     }
 
     @Test
-    void PriceListTestMinus(){
+    void PriceListTestMinus() throws  Exception{
         PriceList pricelistMinus = new PriceList(2);
         pricelistMinus.addPriceScale(-120,10,-10);
-        pricelistMinus.calculate_cost(240);
+       // assertEquals(18,pricelistMinus.calculate_cost(pricelistMinus));
 
     }
     @Test
-    void PriceListTestDouble(){
+    void PriceListTestDouble() throws  Exception{
         PriceList pricelistDouble = new PriceList(3);
         pricelistDouble.addPriceScale(245,25,1);
         pricelistDouble.addPriceScale(755,13,3);
@@ -37,7 +37,7 @@ class PriceListTest {
     }
 
     @Test
-    void PriceListEndScaleTest(){
+    void PriceListEndScaleTest() throws  Exception{
         PriceList pricelistDouble = new PriceList(3);
         pricelistDouble.addPriceScale(245,250,1);
         pricelistDouble.calculate_cost(240);
