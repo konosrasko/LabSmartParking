@@ -48,10 +48,6 @@ class PriceListTest {
         pricelistGetScales.addPriceScale(1440,20,1);
         pricelistGetScales.changePriceScale(2,2880,10,2.5);
 
-
     }
-
-
-
 
 }

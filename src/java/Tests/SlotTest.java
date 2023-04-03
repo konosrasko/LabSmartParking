@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import java.time.LocalTime;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class SlotTest {
@@ -32,19 +35,11 @@ class SlotTest {
     @Test
     void SlotCalcTimeTest(){
         Slot slot = new Slot();
-        System.out.println(slot.calcTime());
+        ParkingStop parkstop = new ParkingStop("1");
+        parkstop.setEntry(LocalTime.of(12,00,00));
+        parkstop.setExit(LocalTime.now());
+        assertEquals(12,slot.calcTime());
     }
 
-//    @Test
-//    void SlotTest(){
-//        pl1.addPriceScale(120,10,1);
-//        pl1.addPriceScale(1440,60,3);
-//        slot.addPriceList(pl1);
-//        ZoneA.addSlot(slot);
-//        p1.addZone(ZoneA);
-//        pl1.calculate_cost(120);
-//        assertEquals(12,pl1.getTotalCost());
-//
-//    }
 
 }
