@@ -42,4 +42,13 @@ public class Zone {
                 slotList.setName(newName);
         }
     }
+
+    public boolean slotExistance(String slotName){
+        boolean flag = false;
+        for(Slot slotList : slotList){
+            if (slotList.getName().equals(slotName))
+                flag= true;
+        }
+        return flag;
+    }
 }

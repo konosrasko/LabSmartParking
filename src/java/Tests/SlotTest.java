@@ -10,6 +10,18 @@ class SlotTest {
     PriceList pl1 = new PriceList(1);
 
 
+    @Test
+    void slotExistanceTest(){
+        ZoneA.addSlot(new Slot("Slot1"));
+        ZoneA.addSlot(new Slot("Slot2"));
+        ZoneA.addSlot(new Slot("Slot3"));
+        ZoneA.addSlot(new Slot("Slot4"));
+        assertTrue(ZoneA.slotExistance("Slot1"));
+        assertTrue(ZoneA.slotExistance("Slot2"));
+        assertTrue(ZoneA.slotExistance("Slot3"));
+        assertTrue(ZoneA.slotExistance("Slot4"));
+    }
+
 //    @Test
 //    void SlotTest(){
 //        pl1.addPriceScale(120,10,1);

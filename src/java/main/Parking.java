@@ -42,4 +42,13 @@ public class Parking {
     public int numberOfZones() {
         return zoneList.size();
     }
+
+    public boolean zoneExistance(String slotName){
+        boolean flag = false;
+        for(Zone zoneList : zoneList){
+            if (zoneList.getName().equals(slotName))
+                flag= true;
+        }
+        return flag;
+    }
 }
