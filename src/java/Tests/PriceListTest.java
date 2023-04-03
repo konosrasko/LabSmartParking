@@ -40,7 +40,7 @@ class PriceListTest {
         assertThrows(IllegalArgumentException.class,()->  pricelistDouble.addPriceScale(245,250,1));
     }
 
- @Test          //Για το ID οταν ειναι
+    @Test          //Για το ID οταν ειναι
     void ChangePriceScaleTest(){
         PriceList pricelistGetScales = new PriceList(4);
         pricelistGetScales.addPriceScale(120,10,1);
