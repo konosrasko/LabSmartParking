@@ -12,7 +12,13 @@ public class Parking {
     }
 
     public void setName(String name) {
-        this.name = name;
+
+            this.name = name;
+
+
+
+
+
     }
 
     public String getName() {

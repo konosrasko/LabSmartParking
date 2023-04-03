@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,14 +15,15 @@ public class PriceList {
     {
         this.id = id;
     }
-    public void  addPriceScale(int end, int scale, double cost) throws Exception {
+    public void  addPriceScale(int end, int scale, double cost)  {
 
-        if(end>0 && scale>0 && (end>scale) && cost>=0) {
-
-            scaleList.add(new PriceScale(end, scale, cost));
-
-
-            }
+                    if(end>0 && scale>0 && (end>scale) && cost>=0) {
+                        scaleList.add(new PriceScale(end, scale, cost));
+                    }
+                    else
+                    {
+                        throw new IllegalArgumentException ();
+                    }
     }
 
     public void changePriceScale(int id, int end, int scale, double cost)

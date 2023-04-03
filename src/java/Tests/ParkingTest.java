@@ -16,6 +16,8 @@ class ParkingTest {
         assertTrue(parking.getName() == "ParkingName");
     }
 
+
+
     @Test
     void aZoneShouldBeAdded() {
         int previousSize = parking.getZoneList().size();
