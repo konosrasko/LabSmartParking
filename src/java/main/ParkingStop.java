@@ -39,6 +39,9 @@ public class ParkingStop {
         return duration;
     }
 
+    public String getTags() {
+        return tags;
+    }
 
 
 }

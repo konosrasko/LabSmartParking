@@ -35,7 +35,7 @@ public class Zone {
         System.out.println(Arrays.toString(slotList.toArray()));
     }
 
-    public void nameChange(String oldName,String newName){
+    public void slotNameChange(String oldName,String newName){
         for(Slot slotList : slotList){
             if (slotList.getName().equals(oldName))
                 slotList.setName(newName);
