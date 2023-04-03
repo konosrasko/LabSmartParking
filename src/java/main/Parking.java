@@ -5,9 +5,14 @@ import java.util.List;
 public class Parking {
     private String name;
     private List<Zone> zoneList = new ArrayList<>();
+    public Parking(){}
 
     public Parking(String name){
             this.name=name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -19,7 +24,8 @@ public class Parking {
     }
 
     public void printZoneList(){
-        System.out.println(Arrays.toString(zoneList.toArray()));
+        for(Zone zoneList : zoneList)
+            System.out.println(zoneList.getName());
     }
 
     public void zoneNameChange(String oldName,String newName){
@@ -33,13 +39,11 @@ public class Parking {
         zoneList.add(zone);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int numberOfZones()
-    {
+    public int numberOfZones() {
         return zoneList.size();
     }
 
+    public String getZoneName(){
+        Zone.
+    }
 }
