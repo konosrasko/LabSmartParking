@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -54,9 +54,7 @@ class ParkingTest {
         parking.addZone(z1);
         parking.addZone(z2);
 
-        assertTrue( parking.zoneExistence(z2.getName()) == true , " The zone is not on the list ");
-
-
+        assertEquals(true,parking.zoneExistence(z2.getName()),"The zone does not exist in the list");
     }
 }
 
