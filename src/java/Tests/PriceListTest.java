@@ -31,7 +31,7 @@ class PriceListTest {
         PriceList pricelistDouble = new PriceList(3);
         pricelistDouble.addPriceScale(245,25,1);
         pricelistDouble.addPriceScale(755,13,3);
-        pricelistDouble.calculate_cost(240);
+        assertEquals(129.6923076923077,pricelistDouble.calculate_cost(755));
     }
 
     @Test
