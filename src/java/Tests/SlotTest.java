@@ -42,5 +42,13 @@ class SlotTest {
         assertEquals(150,slot.calcTime());
     }
 
+    @Test
+    void addAPriceListTest()
+    {
+        int previousSize = slot.getPriceList().size();
+        slot.addPriceList(pl1);
+        int currentSize = slot.getPriceList().size();
+       assertTrue(currentSize > previousSize , " a priceList failed to be added");
+    }
 
 }

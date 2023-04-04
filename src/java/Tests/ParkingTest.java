@@ -43,5 +43,20 @@ class ParkingTest {
         parking2.zoneNameChange("A","a");
         assertTrue(parking2.getZoneList().get(0).getName() == "a", "The zone name failed to changed successfully");
     }
+
+    @Test
+    void zoneExistenceTest()
+    {
+        Zone z1 = new Zone("asd");
+        Zone z2 = new Zone("g");
+        Zone z3 = new Zone("f");
+
+        parking.addZone(z1);
+        parking.addZone(z2);
+
+        assertTrue( parking.zoneExistence(z2.getName()) == true , " The zone is not on the list ");
+
+
+    }
 }
 

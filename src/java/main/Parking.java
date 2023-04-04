@@ -45,7 +45,7 @@ public class Parking {
         return zoneList.size();
     }
 
-    public boolean zoneExistance(String slotName){
+    public boolean zoneExistence(String slotName){
         boolean flag = false;
         for(Zone zoneList : zoneList){
             if (zoneList.getName().equals(slotName))
