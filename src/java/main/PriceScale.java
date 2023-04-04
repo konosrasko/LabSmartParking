@@ -16,6 +16,17 @@ public class PriceScale {
         this.cost = cost; //per scale unit
     }
 
+    protected void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    protected void setScale(int scale) {
+        this.scale = scale;
+    }
+
+    protected void setCost(double cost) {
+        this.cost = cost;
+    }
 
     public double getCost(){
         return cost;
