@@ -37,7 +37,7 @@ public class PriceList {
         {
             if (scaleList.get(i).getId() == id){
                 index = i;
-
+                PriceScale.set
                 found = true;
                 break;
             }
