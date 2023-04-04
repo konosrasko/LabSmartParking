@@ -7,7 +7,9 @@ public class ParkingStop {
     private String tags;
     private LocalTime entry, exit;
     private long duration;
+    public ParkingStop(){
 
+    }
     public ParkingStop(String tag)
     {
         tags = tag;

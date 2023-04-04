@@ -10,15 +10,17 @@ public class PriceList {
     private List<PriceScale> scaleList = new ArrayList<>();
 
 
+    public PriceList(){
 
+    }
     public PriceList(int id)
     {
         this.id = id;
     }
-    public void  addPriceScale(int end, int scale, double cost)  {
+    public void  addPriceScale(int id,int end, int scale, double cost)  {
 
                     if(end>0 && scale>0 && (end>scale) && cost>=0) {
-                        scaleList.add(new PriceScale(end, scale, cost));
+                        scaleList.add(new PriceScale(id, end, scale, cost));
                     }
                     else
                     {
@@ -42,7 +44,7 @@ public class PriceList {
 
         if(found)
         {
-            scaleList.add(index, new PriceScale(end, scale, cost));
+            scaleList.add(index, new PriceScale(id, end, scale, cost));
         }
     }
 
