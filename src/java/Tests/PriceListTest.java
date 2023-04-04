@@ -23,7 +23,10 @@ class PriceListTest {
     @Test
     void PriceListTestMinus() {
         PriceList pricelistMinus = new PriceList(2);
-        assertThrows(IllegalArgumentException.class,()->pricelistMinus.addPriceScale(-120,10,-10));
+
+            assertThrows(IllegalArgumentException.class,()->pricelistMinus.addPriceScale(120,10,-10));
+
+
     }
 
     @Test
@@ -37,7 +40,9 @@ class PriceListTest {
     @Test
     void PriceListEndScaleTest() {
         PriceList pricelistDouble = new PriceList(3);
+
         assertThrows(IllegalArgumentException.class,()->  pricelistDouble.addPriceScale(245,250,1));
+
     }
 
     @Test          //Για το ID οταν ειναι
@@ -49,5 +54,7 @@ class PriceListTest {
         pricelistGetScales.changePriceScale(2,2880,10,2.5);
 
     }
+
+
 
 }
