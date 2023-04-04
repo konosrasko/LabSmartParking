@@ -22,7 +22,7 @@ public class PriceList {
         }
         else
         {
-                        throw new IllegalArgumentException ();
+            throw new IllegalArgumentException ();
         }
     }
 
