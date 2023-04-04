@@ -37,9 +37,18 @@ class SlotTest {
         Slot slot = new Slot();
         ParkingStop parkstop = new ParkingStop("1");
         parkstop.setEntry(LocalTime.of(12,00,00));
-        parkstop.setExit(LocalTime.now());
-        assertEquals(12,slot.calcTime());
+        parkstop.setExit(LocalTime.of(14,30,00));
+        slot.setPStop(parkstop);
+        assertEquals(150,slot.calcTime());
     }
 
+    @Test
+    void addAPriceListTest()
+    {
+        int previousSize = slot.getPriceList().size();
+        slot.addPriceList(pl1);
+        int currentSize = slot.getPriceList().size();
+       assertTrue(currentSize > previousSize , " a priceList failed to be added");
+    }
 
 }

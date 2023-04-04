@@ -28,6 +28,7 @@ public class Slot {
 
     public double calcTime()
     {
+
         return pStop.getDuration();
     }
 
@@ -45,5 +46,9 @@ public class Slot {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setPStop(ParkingStop pStop) {
+        this.pStop = pStop;
     }
 }
