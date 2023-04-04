@@ -35,4 +35,15 @@ public class PriceScale {
         return id;
     }
 
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public void setScale(int scale) {
+        this.scale = scale;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
 }
