@@ -34,7 +34,7 @@ class PriceListTest {
         PriceList pricelistDouble = new PriceList(3);
         pricelistDouble.addPriceScale(245,25,1);
         pricelistDouble.addPriceScale(755,13,3);
-        pricelistDouble.calculate_cost(240);
+        assertEquals(129.6923076923077,pricelistDouble.calculate_cost(755));
     }
 
     @Test
@@ -55,6 +55,16 @@ class PriceListTest {
 
     }
 
-
-
+    @Test
+    void changePriceScaleTest(){
+        PriceList PLchangeScale = new PriceList(5);
+        ParkingStop ps = new ParkingStop("asd");
+        ps.setEntry(LocalTime.of(12,00,00));
+        ps.setExit(LocalTime.of(14,45,00));
+        PLchangeScale.setId(0);
+        PLchangeScale.addPriceScale(240,10,1);
+        PLchangeScale.addPriceScale(1440,30,1);
+        PLchangeScale.changePriceScale(PLchangeScale.getId(),550,10,1);
+        assertEquals(17.5,PLchangeScale.calculate_cost(ps.getDuration()));
+    }
 }
