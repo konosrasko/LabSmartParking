@@ -57,14 +57,13 @@ class PriceListTest {
 
     @Test
     void changePriceScaleTest(){
-        PriceList PLchangeScale = new PriceList(5);
+        PriceList PLchangeScale = new PriceList();
         ParkingStop ps = new ParkingStop("asd");
         ps.setEntry(LocalTime.of(12,00,00));
-        ps.setExit(LocalTime.of(14,45,00));
-        PLchangeScale.setId(0);
-        PLchangeScale.addPriceScale(0,240,10,1);
+        ps.setExit(LocalTime.of(13,00,00));
+        PLchangeScale.addPriceScale(0,60,10,1);
         PLchangeScale.addPriceScale(1,1440,30,1);
-        PLchangeScale.changePriceScale(PLchangeScale.getId(),550,10,1);
-        assertEquals(17.5,PLchangeScale.calculate_cost(ps.getDuration()));
+        PLchangeScale.changePriceScale(PLchangeScale.getId(),60,10,2);
+        assertEquals(12,PLchangeScale.calculate_cost(ps.getDuration()));
     }
 }

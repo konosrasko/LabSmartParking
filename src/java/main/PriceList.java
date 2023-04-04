@@ -19,7 +19,7 @@ public class PriceList {
     }
     public void  addPriceScale(int id,int end, int scale, double cost)  {
 
-                    if(end>0 && scale>0 && (end>scale) && cost>=0) {
+                    if(scale > 0 && (end > scale) && cost >= 0) {
                         scaleList.add(new PriceScale(id, end, scale, cost));
                     }
                     else
@@ -30,21 +30,14 @@ public class PriceList {
 
     public void changePriceScale(int id, int end, int scale, double cost)
     {
-        int index=0;
-        boolean found = false;
 
         for(int i=0;i< scaleList.size();i++)
         {
             if (scaleList.get(i).getId() == id){
-                index = i;
-                found = true;
-                break;
+                scaleList.get(i).setScale(scale);
+                scaleList.get(i).setCost(cost);
+                scaleList.get(i).setDuration(end);
             }
-        }
-
-        if(found)
-        {
-            scaleList.add(index, new PriceScale(id, end, scale, cost));
         }
     }
 
