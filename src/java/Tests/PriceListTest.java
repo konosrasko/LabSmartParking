@@ -14,9 +14,9 @@ class PriceListTest {
         ParkingStop pk = new ParkingStop("aSD");
         pk.setEntry(LocalTime.of(12,00,00));
         pk.setExit(LocalTime.of(14,45,00));
-        pricelist.addPriceScale(120,20,1);
-        pricelist.addPriceScale(1440,60,3);
-        pricelist.addPriceScale(2880,240,2);
+        pricelist.addPriceScale(1,120,20,1);
+        pricelist.addPriceScale(2,1440,60,3);
+        pricelist.addPriceScale(3,2880,240,2);
         assertEquals(11.25,pricelist.calculate_cost(pk.getDuration()));
     }
 
@@ -24,7 +24,7 @@ class PriceListTest {
     void PriceListTestMinus() {
         PriceList pricelistMinus = new PriceList(2);
 
-            assertThrows(IllegalArgumentException.class,()->pricelistMinus.addPriceScale(120,10,-10));
+            assertThrows(IllegalArgumentException.class,()->pricelistMinus.addPriceScale(1,120,10,-10));
 
 
     }
@@ -32,8 +32,8 @@ class PriceListTest {
     @Test
     void PriceListTestDouble() {
         PriceList pricelistDouble = new PriceList(3);
-        pricelistDouble.addPriceScale(245,25,1);
-        pricelistDouble.addPriceScale(755,13,3);
+        pricelistDouble.addPriceScale(1,245,25,1);
+        pricelistDouble.addPriceScale(2,755,13,3);
         assertEquals(129.6923076923077,pricelistDouble.calculate_cost(755));
     }
 
@@ -41,17 +41,17 @@ class PriceListTest {
     void PriceListEndScaleTest() {
         PriceList pricelistDouble = new PriceList(3);
 
-        assertThrows(IllegalArgumentException.class,()->  pricelistDouble.addPriceScale(245,250,1));
+        assertThrows(IllegalArgumentException.class,()->  pricelistDouble.addPriceScale(1,245,250,1));
 
     }
 
     @Test          //Για το ID οταν ειναι
     void ChangePriceScaleTest(){
         PriceList pricelistGetScales = new PriceList(4);
-        pricelistGetScales.addPriceScale(120,10,1);
-        pricelistGetScales.addPriceScale(240,10,1);
-        pricelistGetScales.addPriceScale(1440,20,1);
-        pricelistGetScales.changePriceScale(2,2880,10,2.5);
+        pricelistGetScales.addPriceScale(1,120,10,1);
+        pricelistGetScales.addPriceScale(2,240,10,1);
+        pricelistGetScales.addPriceScale(3,1440,20,1);
+        pricelistGetScales.changePriceScale(3,2880,10,2.5);
 
     }
 
@@ -62,8 +62,8 @@ class PriceListTest {
         ps.setEntry(LocalTime.of(12,00,00));
         ps.setExit(LocalTime.of(14,45,00));
         PLchangeScale.setId(0);
-        PLchangeScale.addPriceScale(240,10,1);
-        PLchangeScale.addPriceScale(1440,30,1);
+        PLchangeScale.addPriceScale(0,240,10,1);
+        PLchangeScale.addPriceScale(1,1440,30,1);
         PLchangeScale.changePriceScale(PLchangeScale.getId(),550,10,1);
         assertEquals(17.5,PLchangeScale.calculate_cost(ps.getDuration()));
     }
